@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Timothy Lin</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main future imperfect.css" />
+
+		<style>
+				video{
+				  width: 20%;
+				  height: auto;
+				}
+		</style>
+
+	
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Timothy Lin</a></h1>
+					
+						<nav class="main">
+			
+						</nav>
+					</header>
+
+		 
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<!-- <h2><a href="#">Rice Planting Test Bed</a></h2>  Makes it a link-->
+										<h2>Programmable LED Lava Lamp</h2>
+										<!-- <p>caption</p>-->
+
+									</div>
+									
+								</header>
+								<!--
+								<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>	
+								-->
+								<p style="text-align:center;"><img src="images/LED lava lamp/main.PNG" alt="MAIN" width="337" height="600"></p>	 
+								<p>FadeCandy is a Neopixel driver that excels in creating LED art with it's built in dithering that can be controlled via USB.
+								    The dithering gives LEDs a smoother in between color rather than the hard transitions from other LEDS.  In fact, FadeCandy works with the 
+									popular WS2812B LEDs as well as others from third parties.  Each FadeCandy board can power up to 512 LEDs, 
+									that's 64 LEDs on each of the 8 channels.  The board supports many different languages such as Processing, Python, and C just to name a few. 
+									 It also communicates to the LEDs on the computer via server protocol.</p>
+
+								<p style="text-align:center;"><img src="images/LED lava lamp/FadeCandy.jpg" alt="" width="600" height="450"></p>
+								<p style="text-align:center;">FadeCandy board</p>
+
+
+								<h2>Power Setup and Wiring</h2>
+
+								
+								<p>Power consumption on LED projects can vary greatly and having the right power supply is crucial.  I wanted a good height to the LED lamp 
+									so I decided that 8 strips of 15 LEDs was sufficient. That's a total of 120 LEDs to power.  The FadeCandy has 8 total channels that can drive up to 64 LEDs each.
+									Therefore I connected 120 LEDs split over two channels. </p>
+								<p>Next was determining how much power the lamp would consume.  At full brightness, a single LED pixel draws about 60 mA at 5V. My LED lamp 
+									would consume 7.2A on full brightness (120 LEDs x 60 mA).  Although my lamp would never have all LEDs operate on full brightness at once,
+									I conservatively chose a 10A 5V power supply. I also choose to use 18 gauge (AWG) wire because they were rated for 16A which was more than enough
+									to prevent overheating.  I wanted the LED strips to be easily disassembled so I chose to create my own JST connectors then solder the wires onto the LED
+									strips.</p>
+
+								<p style="text-align:center;"><img src="images/LED lava lamp/split pic LED solder JST2.jpg " alt="" width="500" height="405"></p>
+								<p style="text-align:center;">Cut the LED strips into desired lengths then soldered the wires with JST connectors onto the strips.</p>
+
+								<p style="text-align:center;"><img src="images/LED lava lamp/wire layout.JPG" alt="" width="750" height="400"></p>
+								<p>Here are all the necessary wires and the JST connectors I made that were eventually soldered onto the LED strips.  
+									I decided to add a 1000 microfard 6.3V capacitor to the power supply to prevent the initial rush of current from damaging the pixels as well.</p>
+								
+								<p style="text-align:center;"><img src="images/LED lava lamp/leds_harness-diagram.jpg" alt="" width="900" height="339"></p>
+								<p>An overview of how everything in this project connects together.  Since I am powering two sets of LED strips,
+								both the 5V and GND need to connect to them.  We can do this by creating a three way inline splice which takes a single power wire and splits into two.  
+								This same thing is created for the GND wires as well.  On the right are the JST connections to the LED strips.  The Data and GND from the LED strips are then connected
+								to the FadeCandy controller.  Another three way inline splice was created to link the LED strip and FadeCandy grounds together with the main ground.
+									</p>
+							
+								<p style="text-align:center;"><img src="images/LED lava lamp/led testing layout.JPG" alt="" width="400" height="698" style="transform:rotate(180deg);"></p>
+								<p>Once the LED strips had all their JST connectors soldered on, I arranged them in a 8x15 grid connected in a zigzag pattern on a flat surface first.
+								This allowed me to test my wire connections and LEDs with the FadeCandy.
+								</p>
+								
+								<h2>Testing and Assembly</h2>
+							
+								<p style="text-align:center;"><video width="1000" height="1000" controls muted> <!--width and height doesnt have any affect-->
+								<source src="images/LED lava lamp/testing.mp4" type="video/mp4">
+							  	</video>
+								</p>
+								<p>The FadeCandy runs on the Processing programming language which is ideal for creating multimedia art.  After installing the Processing IDE I tested 
+								my grid using some of their examples.  There were some modifications to their code such as changing the grid layout to 8x15 and re-orientating.  
+								</p>	
+
+								<p style="text-align:center;"><img src="images/LED lava lamp/LED on PVC .JPG" alt="" width="300" height="610"></p>
+								<p style="text-align:center;">I wrapped the LED grid around 1 1/4 in PVC pipe using adhesives and 3D printed a base for the PVC pipe to attach to. </p>	
+
+								<p style="text-align:center;"><img src="images/LED lava lamp/PVC w. vase .JPG" alt="" width="300" height="610"></p>
+								<p style="text-align:center;">I found a vase at a local crafts store to cover the LEDs. </p>	
+
+								<p style="text-align:center;"><img src="images/LED lava lamp/testing1.gif" alt="" width="300" height="534"></p>
+								<p style="text-align:center;">LED testing</p>
+								
+								
+								<p style="text-align:center;"><img src="images/LED lava lamp/testing2.gif" alt="" width="300" height="534"></p>
+								<p> To diffuse the light on the lamp, I decided to go with sheets of mylar.  These mylar sheets were intended for stencil making because of their
+								transparency but they worked well as a diffuser.  It took about 6 sheets of mylar to diffuse the light where you could no longer make out the LEDs.
+								</p>	
+
+								<p style="text-align:center;"><img src="images/LED lava lamp/testing3.gif" alt="" width="300" height="534"></p>
+								<p style="text-align:center;"><img src="images/LED lava lamp/testing4.gif" alt="" width="300" height="534"></p>
+								<p style="text-align:center;"><img src="images/LED lava lamp/testing5.gif" alt="" width="300" height="534"></p>
+
+								<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+								
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<!--
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						-->
+						<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. </p>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			
+	</body>
+</html>
